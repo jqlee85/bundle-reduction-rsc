@@ -3,7 +3,7 @@ import PostContent from "../components/PostContent";
 
 async function getPosts() {
 
-  const res = await fetch('https://dummyjson.com/posts');
+  const res = await fetch('https://dummyjson.com/posts?limit=50');
 
   // Recommendation: handle errors
   if (!res.ok) {
