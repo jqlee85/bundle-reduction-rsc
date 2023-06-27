@@ -1,16 +1,23 @@
 import sanitizeHtml from 'sanitize-html'; // Importing a large package to test impacts of RSC vs Traditional React
+import TagsList from '../TagsList';
+import CommentsList from '../CommentsList';
 
-export default function PostContent( {post}: {post: any}) {
+async function getComments(postId: number) {
+  const response = await fetch(`https://dummyjson.com/posts/${postId}/comments`);
+  const {comments} = await response.json();
+  return comments;
+}
+
+export default async function PostContent( {post}: {post: any}) {
   
-  console.log('post',post);
+  const comments = await getComments(post.id);
 
   return (
-    <article className="flex flex-col justify-center items-center w-full max-w-2xl p-4">
-      <h2 className="text-2xl font-bold">{post.title}</h2>
-      <p className="text-xl">{sanitizeHtml(post.body)}</p>
-      <ul>
-        {post.tags.map( (tag: string) => <li key={`tag_${tag}`}>{tag}</li>)}
-      </ul>
+    <article className="flex flex-col justify-center items-center w-full max-w-2xl p-4 mb-10">
+      <h2 className="text-2xl font-bold my-2">{post.title}</h2>
+      <p className="text-xl my-8">{sanitizeHtml(post.body)}</p>
+      <TagsList tags={post.tags} />
+      <CommentsList comments={comments} />
     </article>
   );
 }

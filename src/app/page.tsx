@@ -1,6 +1,6 @@
 import PostContent from "../components/PostContent";
 
-
+// Fetches posts from dummyjson.com
 async function getPosts() {
 
   const res = await fetch('https://dummyjson.com/posts?limit=50');
@@ -17,6 +17,7 @@ async function getPosts() {
   } else { return []}
 }
 
+// Note this is a a server component, so we can fetch data here
 export default async function Home() {
   
   const posts = await getPosts();
