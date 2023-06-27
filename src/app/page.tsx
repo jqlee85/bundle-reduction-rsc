@@ -17,7 +17,6 @@ async function getPosts() {
   } else { return []}
 }
 
-
 export default async function Home() {
   
   const posts = await getPosts();

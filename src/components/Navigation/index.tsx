@@ -1,5 +1,4 @@
 'use client';
-
 import React, { useState, useRef, useEffect } from 'react';
 
 const Navigation: React.FC = () => {
@@ -19,11 +18,17 @@ const Navigation: React.FC = () => {
         onClick={() => setIsOpen(!isOpen)} 
         aria-haspopup="true"
         aria-expanded={isOpen}
-        className="hamburger p-2 text-white"
+        className="hamburger p-2 text-white absolute top-0 right-0 z-10"
       >
-        <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path>
-        </svg>
+        {isOpen ? (
+          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        ) : (
+          <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path>
+          </svg>
+        )}
       </button>
 
       {/* Hamburger menu */}
@@ -33,7 +38,6 @@ const Navigation: React.FC = () => {
           tabIndex={-1}
           role="menu"
           className="fixed top-0 w-full h-auto bg-gray-800 text-white py-2 overflow-auto"
-          onBlur={() => setIsOpen(false)}
         >
           <div className="w-11/12 md:w-96 mx-auto">
             <a href="#" role="menuitem" className="block px-4 py-2 hover:bg-gray-700">Link 1</a>
