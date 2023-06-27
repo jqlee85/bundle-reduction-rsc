@@ -1,4 +1,6 @@
 import PostContent from "../components/PostContent";
+import Main from "../components/Main";
+import Sidebar from "../components/Sidebar";
 
 // Fetches posts from dummyjson.com
 async function getPosts() {
@@ -24,10 +26,15 @@ export default async function Home() {
   console.log({posts})
 
   return (
-    <div className="flex min-h-screen flex-col items-center justify-between p-24">
-      {
-        posts.map( (post: any) => <PostContent key={`post_${post.id}`} post={post} />)
-      }
+    <div className="flex min-h-screen flex-row justify-between p-24">
+      <Sidebar/>
+      <Main>
+        <h1 className="text-4xl font-bold mb-6">First 50 Posts</h1>
+        {
+          posts.map( (post: any) => <PostContent key={`post_${post.id}`} post={post} />)
+        }
+      </Main>
+      
     </div>
   )
 }

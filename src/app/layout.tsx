@@ -2,7 +2,6 @@ import './globals.css'
 import { Inter } from 'next/font/google'
 import Navigation from '../components/Navigation';
 import Footer from '../components/Footer';
-import Main from '../components/Main';
 import NavItem from '../components/NavItem';
 
 const inter = Inter({ subsets: ['latin'] })
@@ -26,7 +25,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <Navigation>{navItems.map( (navItem, i) => (<NavItem key={`nav_item_${i}`} {...navItem}/>) )}</Navigation>
-        <Main>{children}</Main>
+        {children}
         <Footer/>
       </body>
     </html>
