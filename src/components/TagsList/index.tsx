@@ -15,4 +15,6 @@ const TagsList: React.FC<TagProps> = ({ tags }) => {
   );
 };
 
+TagsList.displayName = 'TagsList';
+
 export default TagsList;

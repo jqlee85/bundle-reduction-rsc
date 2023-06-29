@@ -21,3 +21,5 @@ export default async function PostContent( {post}: {post: any}) {
     </article>
   );
 }
+
+PostContent.displayName = "PostContent";

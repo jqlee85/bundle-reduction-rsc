@@ -31,4 +31,6 @@ const CommentsList: React.FC<CommentsListProps> = ({ comments }) => {
   );
 };
 
+CommentsList.displayName = 'CommentsList';
+
 export default CommentsList;

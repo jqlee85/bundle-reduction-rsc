@@ -22,4 +22,6 @@ const SubMenu: React.FC<{children:ReactNode}> =  ({children}) => {
 
 }
 
+SubMenu.displayName = 'SubMenu';
+
 export default SubMenu;

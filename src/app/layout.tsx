@@ -36,6 +36,7 @@ export default function RootLayout({
   )
 }
 
+RootLayout.displayName = 'RootLayout';
 
 const NavigationContent = () => {
   return (
@@ -92,3 +93,4 @@ const NavigationContent = () => {
     )
 }
 
+NavigationContent.displayName = 'NavigationContent';

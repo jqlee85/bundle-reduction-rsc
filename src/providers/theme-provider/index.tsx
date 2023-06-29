@@ -15,3 +15,5 @@ export default function ThemeProvider({
     </div>
   </ThemeContext.Provider>
 }
+
+ThemeProvider.displayName = "ThemeProvider";

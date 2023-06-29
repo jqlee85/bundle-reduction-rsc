@@ -25,4 +25,6 @@ const Sidebar: React.FC = async () => {
   );
 };
 
+Sidebar.displayName = 'Sidebar';
+
 export default Sidebar;
