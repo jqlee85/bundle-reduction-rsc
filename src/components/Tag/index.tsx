@@ -11,7 +11,7 @@ const logData = (tag: string) => {
 const Tag: React.FC<TagProps> = ({ tag }) => {
   return (
     <span
-      className="m-1 p-2 border border-orange-500 bg-orange-800 text-black rounded-sm hover:bg-red-300 transition-colors duration-200 cursor-pointer"
+      className="m-1 p-2 border border-sky-500 bg-sky-800 text-black rounded-sm hover:bg-red-300 transition-colors duration-200 cursor-pointer"
       onClick={() => logData(tag)}
     >
       {tag}

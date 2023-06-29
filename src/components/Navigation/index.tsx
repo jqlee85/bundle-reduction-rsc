@@ -11,7 +11,7 @@ const Navigation: React.FC<{children:ReactNode}> = ({ children }) => {
   }, [isOpen]);
 
   return (
-    <div className="fixed w-full height-auto overflow-hidden bg-orange-800 border border-orange-500 ">
+    <div className="fixed w-full height-auto overflow-hidden bg-sky-800 border border-sky-500 ">
       {/* Hamburger button */}
       <button 
         onClick={() => setIsOpen(!isOpen)} 
