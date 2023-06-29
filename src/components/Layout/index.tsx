@@ -1,4 +1,3 @@
-import '../../public/globals.css'
 import React from 'react'
 import Navigation from '../Navigation';
 import SubMenu from '../SubMenu';
