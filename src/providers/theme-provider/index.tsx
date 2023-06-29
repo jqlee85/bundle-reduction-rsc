@@ -10,7 +10,7 @@ export default function ThemeProvider({
   children: React.ReactNode
 }) {
   return <ThemeContext.Provider value="dark">
-    <div className="border border-orange-500">
+    <div className="border border-sky-500">
       {children}  
     </div>
   </ThemeContext.Provider>
