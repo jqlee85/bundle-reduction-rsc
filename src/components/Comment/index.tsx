@@ -26,4 +26,6 @@ const Comment: React.FC<CommentProps> = ({ id, body, postId, user }) => {
   );
 };
 
+Comment.displayName = 'Comment';
+
 export default Comment;
