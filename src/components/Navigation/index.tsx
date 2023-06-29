@@ -1,4 +1,3 @@
-'use client';
 import React, { ReactNode, useState, useRef, useEffect } from 'react';
 
 const Navigation: React.FC<{children:ReactNode}> = ({ children }) => {

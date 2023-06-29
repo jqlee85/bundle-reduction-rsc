@@ -1,10 +1,10 @@
-import './globals.css'
+import '../../pages/globals.css'
 import React, {ReactNode} from 'react'
 import { Inter } from 'next/font/google'
-import Navigation from '../components/Navigation';
-import SubMenu from '../components/SubMenu';
-import Footer from '../components/Footer';
-import ThemeProvider from '../providers/theme-provider'
+import Navigation from '../Navigation';
+import SubMenu from '../SubMenu';
+import Footer from '../Footer';
+import ThemeProvider from '../../providers/theme-provider'
 
 const inter = Inter({ subsets: ['latin'] })
 

@@ -2,15 +2,9 @@ import sanitizeHtml from 'sanitize-html'; // Importing a large package to test i
 import TagsList from '../TagsList';
 import CommentsList from '../CommentsList';
 
-async function getComments(postId: number) {
-  const response = await fetch(`https://dummyjson.com/posts/${postId}/comments`);
-  const {comments} = await response.json();
-  return comments;
-}
-
-export default async function PostContent( {post}: {post: any}) {
+export default function PostContent( {post}: {post: any}) {
   
-  const comments = await getComments(post.id);
+  const {comments} = post;
 
   return (
     <article className="flex flex-col justify-center items-center w-full max-w-2xl p-4 mb-10">
