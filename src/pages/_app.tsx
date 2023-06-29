@@ -13,4 +13,6 @@ const MyApp: React.FC<AppProps> = ({ Component, pageProps }: AppProps) => {
   )
 }
 
+MyApp.displayName = 'MyApp';
+
 export default MyApp;

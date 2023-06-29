@@ -15,3 +15,5 @@ export default function PostContent( {post}: {post: any}) {
     </article>
   );
 }
+
+PostContent.displayName = 'PostContent';

@@ -19,4 +19,6 @@ const Tag: React.FC<TagProps> = ({ tag }) => {
   );
 };
 
+Tag.displayName = 'Tag';
+
 export default Tag;

@@ -36,4 +36,6 @@ const Navigation: React.FC<{children:ReactNode}> = ({ children }) => {
   );
 }
 
+Navigation.displayName = 'Navigation';
+
 export default Navigation;

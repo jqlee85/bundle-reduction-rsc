@@ -1,12 +1,9 @@
-import '../../pages/globals.css'
-import React, {ReactNode} from 'react'
-import { Inter } from 'next/font/google'
+import '../../public/globals.css'
+import React from 'react'
 import Navigation from '../Navigation';
 import SubMenu from '../SubMenu';
 import Footer from '../Footer';
 import ThemeProvider from '../../providers/theme-provider'
-
-const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
   title: 'Create Next App',
@@ -19,8 +16,6 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
         <ThemeProvider>
           <div className="bg-none">
             <Navigation>
@@ -30,12 +25,10 @@ export default function RootLayout({
             <Footer/>
           </div>
         </ThemeProvider>
-        
-      </body>
-    </html>
   )
 }
 
+RootLayout.displayName = 'RootLayout';
 
 const NavigationContent = () => {
   return (
@@ -92,3 +85,4 @@ const NavigationContent = () => {
     )
 }
 
+NavigationContent.displayName = 'NavigationContent';

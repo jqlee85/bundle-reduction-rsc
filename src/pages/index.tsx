@@ -51,6 +51,8 @@ export default function Home(props:any) {
   )
 }
 
+Home.displayName = 'Home';
+
 export async function getServerSideProps(
   context: GetServerSidePropsContext,
 ): Promise<GetServerSidePropsResult<any>> {

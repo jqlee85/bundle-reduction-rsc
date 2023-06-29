@@ -17,4 +17,6 @@ const Quote: React.FC<QuoteProps> = ({ quoteObj }) => {
   );
 };
 
+Quote.displayName = 'Quote';
+
 export default Quote;

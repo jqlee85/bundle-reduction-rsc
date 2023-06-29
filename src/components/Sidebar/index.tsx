@@ -16,4 +16,6 @@ const Sidebar: React.FC<{quotes:any}> = ( { quotes }) => {
   );
 };
 
+Sidebar.displayName = 'Sidebar';
+
 export default Sidebar;

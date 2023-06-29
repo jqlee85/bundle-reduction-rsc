@@ -5,3 +5,5 @@ export default function Main({ children }: { children: React.ReactNode }) {
     </main>
   );
 }
+
+Main.displayName = 'Main';
