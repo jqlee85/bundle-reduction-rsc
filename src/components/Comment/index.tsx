@@ -20,7 +20,7 @@ const Comment: React.FC<CommentProps> = ({ id, body, postId, user }) => {
   return (
     <div className="border border-sky-500 p-4 mb-4 bg-sky-800">
       <p>{body}</p>
-      <div className="text-gray-500 mt-2">
+      <div className="text-gray-300 mt-2">
         <span className="hover:cursor-pointer" onClick={handleUserClick}>Posted by: {user.username}</span>
       </div>
     </div>
